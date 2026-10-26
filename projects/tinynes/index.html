@@ -41,13 +41,11 @@
             <span>Hardware proven</span><span>Desktop integrated</span><span>Open source</span>
           </div>
         </div>
-        <figure class="media-placeholder media-placeholder-hero reveal reveal-delay">
-          <div class="placeholder-screen">
-            <span class="placeholder-grid" aria-hidden="true"></span>
-            <strong>SCREENSHOT<br>01</strong>
-            <small>GAMEPLAY ON HARDWARE · 16:9</small>
-          </div>
-          <figcaption><span>Replace with:</span> a clean HDMI capture of a recognizable game scene</figcaption>
+        <figure class="project-shot project-shot-hero reveal reveal-delay">
+          <a class="shot-frame" href="../../assets/screenshots/tinynes/gameplay.png" target="_blank" rel="noopener" aria-label="Open the gameplay capture at full resolution">
+            <img src="../../assets/screenshots/tinynes/gameplay.png" width="1280" height="720" fetchpriority="high" alt="Super Mario Bros. 3 title screen rendered by TinyNES with black side bars">
+          </a>
+          <figcaption><span>On hardware</span> TinyNES gameplay captured from the 720p HDMI output</figcaption>
         </figure>
       </div>
     </section>
@@ -70,15 +68,16 @@
         <div><dt>2 players</dt><dd>In-game input</dd></div>
         <div><dt>32 MiB</dt><dd>System SDRAM</dd></div>
       </dl>
-      <div class="media-duo">
-        <figure class="media-placeholder reveal">
-          <div class="placeholder-screen placeholder-light"><strong>SCREENSHOT 02</strong><small>TINYNES LIBRARY · 16:9</small></div>
-          <figcaption><span>Replace with:</span> TinyDesk’s TinyNES Library with several games visible</figcaption>
+      <div class="interface-proof reveal">
+        <figure class="project-shot">
+          <a class="shot-frame" href="../../assets/screenshots/tinynes/library.png" target="_blank" rel="noopener" aria-label="Open the Library tab capture at full resolution"><img src="../../assets/screenshots/tinynes/library.png" width="1280" height="720" loading="lazy" alt="TinyNES Library tab in TinyDesk listing NES cartridge ZIP files"></a>
+          <figcaption><span>Library tab</span> Browse folders, select a cartridge, and launch without a shell</figcaption>
         </figure>
-        <figure class="media-placeholder reveal">
-          <div class="placeholder-screen placeholder-light"><strong>SCREENSHOT 03</strong><small>PHYSICAL CONSOLE · 4:3</small></div>
-          <figcaption><span>Replace with:</span> Tang Console 138K, display, and controller setup</figcaption>
-        </figure>
+        <div class="interface-proof-copy">
+          <span>01 / Library</span>
+          <h3>Your cartridges,<br>inside TinyDesk.</h3>
+          <p>The Library reads directly from <code>/root/media/nes</code>, shows both <code>.nes</code> and <code>.zip</code> files, and keeps every user-facing action in one window.</p>
+        </div>
       </div>
     </section>
 
@@ -119,6 +118,13 @@
           <div class="control-muted"><kbd>A / X</kbd><span>Unassigned</span></div>
         </div>
       </div>
+      <div class="tab-proof tab-proof-input reveal">
+        <figure class="project-shot">
+          <a class="shot-frame" href="../../assets/screenshots/tinynes/input.png" target="_blank" rel="noopener" aria-label="Open the Input tab capture at full resolution"><img src="../../assets/screenshots/tinynes/input.png" width="1280" height="720" loading="lazy" alt="TinyNES Input tab showing player one button mappings"></a>
+          <figcaption><span>Input tab</span> Review or change each player’s button map</figcaption>
+        </figure>
+        <div class="tab-proof-copy"><span>02 / Input</span><h3>Remap from the console.</h3><p>Select a player, choose an action, press the replacement button, and save. Defaults are always one action away.</p></div>
+      </div>
       <div class="shortcut-grid">
         <article class="reveal"><span>Tap</span><h3>HOME</h3><p>Open or close TinyDesk over the running game.</p></article>
         <article class="reveal"><span>Hold</span><h3>HOME + L</h3><p>Save the current game state to the active slot.</p></article>
@@ -136,18 +142,15 @@
         <div class="experience-grid">
           <article class="experience-card reveal">
             <span class="experience-index">V / 01</span><h3>Three picture modes</h3><p>The 256×240 NES image is centered in a 1280×720 HDMI frame. Choose authentic 8:7 pixels, square 1:1 pixels, or a 4:3 television frame.</p>
-            <div class="aspect-demo" aria-label="Supported picture aspect modes"><i class="aspect-87">8:7</i><i class="aspect-11">1:1</i><i class="aspect-43">4:3</i></div>
+            <figure class="project-shot"><a class="shot-frame" href="../../assets/screenshots/tinynes/video.png" target="_blank" rel="noopener" aria-label="Open the Video tab capture at full resolution"><img src="../../assets/screenshots/tinynes/video.png" width="1280" height="720" loading="lazy" alt="TinyNES Video tab with 8 to 7 aspect and FCEUmm palette selected"></a><figcaption><span>Video tab</span> Aspect and palette apply when the next game starts</figcaption></figure>
           </article>
           <article class="experience-card reveal">
             <span class="experience-index">A / 02</span><h3>One audio stream</h3><p>Game audio plays through HDMI and the optional Digilent Pmod I2S2. TinyDesk provides one logarithmic master volume and mute for both outputs.</p>
-            <div class="audio-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <figure class="project-shot"><a class="shot-frame" href="../../assets/screenshots/tinynes/audio.png" target="_blank" rel="noopener" aria-label="Open the Audio tab capture at full resolution"><img src="../../assets/screenshots/tinynes/audio.png" width="1280" height="720" loading="lazy" alt="TinyNES Audio tab showing master volume at 20 percent and the mute setting"></a><figcaption><span>Audio tab</span> HDMI and line out share the master level</figcaption></figure>
           </article>
           <article class="experience-card experience-card-wide reveal">
             <span class="experience-index">UI / 03</span><div><h3>TinyDesk stays live</h3><p>Tap HOME and the 80×45-cell TinyDesk layer replaces the game picture. The game keeps running underneath—with sound—while controller input moves to the desktop. Tap HOME again to return.</p></div>
-            <figure class="media-placeholder media-placeholder-inline">
-              <div class="placeholder-screen"><strong>SCREENSHOT 04</strong><small>TINYDESK OVER A RUNNING GAME · 16:9</small></div>
-              <figcaption><span>Replace with:</span> the desktop overlay while a TinyNES session is active</figcaption>
-            </figure>
+            <div class="overlay-demo" aria-label="HOME button switches between game and TinyDesk"><span>GAME</span><i>HOME</i><span>TINYDESK</span><i>HOME</i><span>GAME</span></div>
           </article>
         </div>
       </div>
@@ -160,6 +163,10 @@
           <p>Each cartridge gets one persistent save-state slot. Saving is immediate in SDRAM, then TinyTang writes the state to the card in the background and verifies it before replacing the previous copy.</p>
           <ul class="feature-checks"><li>States are matched to the cartridge CRC</li><li>Battery-backed game RAM is retained</li><li>The Saves tab exposes file, size, core, and frame details</li><li>Interrupted writes leave the previous state intact</li></ul>
         </div>
+        <figure class="project-shot saves-shot reveal">
+          <a class="shot-frame" href="../../assets/screenshots/tinynes/saves.png" target="_blank" rel="noopener" aria-label="Open the Saves tab capture at full resolution"><img src="../../assets/screenshots/tinynes/saves.png" width="1280" height="720" loading="lazy" alt="TinyNES Saves tab showing metadata for a saved game state and battery save"></a>
+          <figcaption><span>Saves tab</span> State integrity, game identity, frame, core, and battery-save status at a glance</figcaption>
+        </figure>
       </div>
     </section>
 
