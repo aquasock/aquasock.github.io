@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TinyTang is an open FPGA console ecosystem for the Sipeed Tang Console 138K.">
+  <meta name="theme-color" content="#08100f">
+  <title>TinyTang — one board, many systems</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="TinyTang home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>TINY<span>TANG</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <span class="sr-only">Toggle navigation</span><i></i><i></i><i></i>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="projects.html">Projects</a>
+      <a href="architecture.html">Architecture</a>
+      <a href="start.html">Get started</a>
+      <a class="nav-github" href="https://github.com/aquasock" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Open FPGA console ecosystem</p>
+        <h1>One board.<br><em>Many systems.</em></h1>
+        <p class="hero-lede">TinyTang turns the Tang Console 138K into a cartridge-driven playground for classic systems, custom hardware, and bare-metal RISC-V software.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="start.html">Start exploring <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="projects.html">View all projects</a>
+        </div>
+        <dl class="hero-stats" aria-label="Ecosystem highlights">
+          <div><dt>01</dt><dd>shared shell</dd></div>
+          <div><dt>04</dt><dd>integrated systems</dd></div>
+          <div><dt>100%</dt><dd>open source</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-machine reveal reveal-delay" aria-label="Diagram of the TinyTang console">
+        <div class="machine-glow"></div>
+        <div class="machine-frame">
+          <div class="machine-topline"><span>TT-138</span><span>READY</span></div>
+          <div class="machine-screen">
+            <div class="screen-grid"></div>
+            <div class="screen-copy">
+              <span class="screen-kicker">SELECT SYSTEM</span>
+              <strong data-system-name>TinyNES</strong>
+              <span class="screen-meta" data-system-meta>6502 · AE350 · HDMI</span>
+            </div>
+            <div class="screen-scanline"></div>
+          </div>
+          <div class="machine-controls">
+            <div class="dpad" aria-hidden="true"><i></i><i></i></div>
+            <div class="machine-label">FPGA<br>CONSOLE</div>
+            <div class="buttons" aria-hidden="true"><i></i><i></i></div>
+          </div>
+        </div>
+        <div class="cartridge"><span>TINY<br>CORE</span><i></i></div>
+      </div>
+    </section>
+
+    <section class="signal-band" aria-label="Project categories">
+      <div class="signal-track">
+        <span>CONSOLE SHELL</span><i>◆</i><span>FPGA CORES</span><i>◆</i><span>RISC-V RUNTIMES</span><i>◆</i><span>OPEN TOOLCHAIN</span><i>◆</i><span>CONSOLE SHELL</span><i>◆</i><span>FPGA CORES</span><i>◆</i><span>RISC-V RUNTIMES</span><i>◆</i><span>OPEN TOOLCHAIN</span>
+      </div>
+    </section>
+
+    <section class="section section-shell">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">The stack</p>
+          <h2>A console built in layers.</h2>
+        </div>
+        <p>Each repository owns one part of the machine. TinyTang ties them together without hiding where the hardware ends and the software begins.</p>
+      </div>
+      <div class="layer-stack reveal">
+        <a class="layer layer-shell" href="https://github.com/aquasock/TinyTang">
+          <span class="layer-index">01</span>
+          <div><strong>TinyTang</strong><span>BL616 menu, storage, input, and core orchestration</span></div>
+          <b>CONSOLE SHELL</b><i>↗</i>
+        </a>
+        <a class="layer layer-runtime" href="projects.html#systems">
+          <span class="layer-index">02</span>
+          <div><strong>Tiny runtimes</strong><span>System-specific software running close to the hardware</span></div>
+          <b>SOFTWARE</b><i>→</i>
+        </a>
+        <a class="layer layer-core" href="projects.html#cores">
+          <span class="layer-index">03</span>
+          <div><strong>FPGA cores</strong><span>Video, audio, memory, CPUs, and purpose-built logic</span></div>
+          <b>GATEWARE</b><i>→</i>
+        </a>
+        <a class="layer layer-tools" href="projects.html#tooling">
+          <span class="layer-index">04</span>
+          <div><strong>Open toolchain</strong><span>Reproducible synthesis and place-and-route tooling</span></div>
+          <b>BUILD</b><i>→</i>
+        </a>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="featured">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Playable now</p><h2>Four systems.<br>One launcher.</h2></div>
+          <p>The current TinyTang shell recognizes four integrated cartridge families, with newer experiments growing alongside them.</p>
+        </div>
+        <div class="system-grid">
+          <a class="system-card reveal" href="https://github.com/aquasock/TinyNES">
+            <span class="system-number">8·BIT / 01</span><div class="pixel-glyph glyph-nes" aria-hidden="true"></div>
+            <div><h3>TinyNES</h3><p>NES hardware and runtime with save states, HDMI output, and controller support.</p></div>
+            <span class="card-link">Explore repository ↗</span>
+          </a>
+          <a class="system-card reveal" href="https://github.com/aquasock/TinyGBC">
+            <span class="system-number">8·BIT / 02</span><div class="pixel-glyph glyph-gbc" aria-hidden="true"></div>
+            <div><h3>TinyGBC</h3><p>A Game Boy Color system shaped for the shared AE350 console environment.</p></div>
+            <span class="card-link">Explore repository ↗</span>
+          </a>
+          <a class="system-card reveal" href="https://github.com/aquasock/Tiny89">
+            <span class="system-number">CALCULATOR / 03</span><div class="pixel-glyph glyph-89" aria-hidden="true"></div>
+            <div><h3>Tiny89</h3><p>A TI-89 Titanium emulator with an AE350 runtime, HDMI calculator display, and controller input.</p></div>
+            <span class="card-link">Explore repository ↗</span>
+          </a>
+          <a class="system-card reveal" href="https://github.com/aquasock/TinyPhosphor">
+            <span class="system-number">VECTOR / 04</span><div class="pixel-glyph glyph-phosphor" aria-hidden="true"></div>
+            <div><h3>TinyPhosphor</h3><p>A hardware vector display processor and bare-metal graphics environment.</p></div>
+            <span class="card-link">Explore repository ↗</span>
+          </a>
+        </div>
+        <div class="section-cta reveal"><a href="projects.html">See the full ecosystem <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section section-shell split-feature">
+      <div class="feature-terminal reveal" aria-hidden="true">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>tinytang://boot</span></div>
+        <pre><span class="muted">[00.000]</span> Tang Console 138K
+<span class="muted">[00.014]</span> storage ........ <b>OK</b>
+<span class="muted">[00.022]</span> controller ..... <b>OK</b>
+<span class="muted">[00.031]</span> cartridge ...... <b>FOUND</b>
+
+core:     <em>tinynes.fs</em>
+runtime:  <em>tinynes.bin</em>
+media:    <em>game.nes</em>
+
+<span class="prompt">›</span> launching system<span class="cursor">_</span></pre>
+      </div>
+      <div class="feature-copy reveal">
+        <p class="eyebrow">A shared console contract</p>
+        <h2>Change the machine, not the hardware.</h2>
+        <p>The BL616 side handles the stable console experience—files, menus, controllers, and loading. FPGA cartridges provide the machine-specific world behind it.</p>
+        <a class="text-link" href="architecture.html">Trace the boot path <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="section section-accent">
+      <div class="section-shell closing-grid reveal">
+        <div><p class="eyebrow">Build something small</p><h2>Pick a layer.<br>Make it yours.</h2></div>
+        <div><p>Start with the console shell, study an integrated system, or follow the open toolchain all the way down to the bitstream.</p><a class="button button-dark" href="start.html">Choose a path <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><strong>TinyTang</strong></div>
+    <p>An independent open-hardware ecosystem for the Sipeed Tang Console 138K.</p>
+    <div><a href="https://github.com/aquasock">GitHub</a><a href="projects.html">Projects</a><a href="start.html">Docs</a></div>
+  </footer>
+</body>
+</html>

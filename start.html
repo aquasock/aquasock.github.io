@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose a path into the TinyTang open FPGA console ecosystem.">
+  <meta name="theme-color" content="#08100f"><title>Get started — TinyTang</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css"><script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="TinyTang home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>TINY<span>TANG</span></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span class="sr-only">Toggle navigation</span><i></i><i></i><i></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav><a href="index.html">Overview</a><a href="projects.html">Projects</a><a href="architecture.html">Architecture</a><a href="start.html" aria-current="page">Get started</a><a class="nav-github" href="https://github.com/aquasock" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="content">
+    <section class="page-hero section-shell">
+      <p class="eyebrow reveal">Choose your entry point</p>
+      <h1 class="reveal">Start where your<br><em>curiosity is.</em></h1>
+      <div class="page-intro reveal"><p>You do not need to understand the entire stack. Pick the path that matches what you want to do, then let the owning repository guide the details.</p><span class="coordinate">NO MONOREPO<br>NO MAGIC</span></div>
+    </section>
+
+    <section class="path-section section-shell">
+      <div class="path-grid">
+        <article class="path-card path-card-accent reveal">
+          <span class="path-number">PATH 01</span><h2>Use the console</h2><p>Start with the shell, learn the SD-card layout, and launch an existing system.</p>
+          <ol><li>Open the TinyTang quick start</li><li>Prepare the documented card layout</li><li>Add a supported cartridge</li><li>Verify on the Tang Console 138K</li></ol>
+          <a class="button button-dark" href="https://github.com/aquasock/TinyTang#quick-start">TinyTang quick start ↗</a>
+        </article>
+        <article class="path-card reveal">
+          <span class="path-number">PATH 02</span><h2>Study a system</h2><p>Choose one integrated machine and follow its hardware, firmware, and media path.</p>
+          <ol><li>Pick TinyNES, TinyGBC, Tiny89, or TinyPhosphor</li><li>Read its README and docs</li><li>Build with its pinned dependencies</li><li>Run the repository’s verification path</li></ol>
+          <a class="button button-outline" href="projects.html#systems">Compare systems →</a>
+        </article>
+        <article class="path-card reveal">
+          <span class="path-number">PATH 03</span><h2>Build the stack</h2><p>Trace the open FPGA flow and reproduce the tools used to turn RTL into a bitstream.</p>
+          <ol><li>Review the TinyTang build guide</li><li>Set up the pinned toolchain</li><li>Build a known system first</li><li>Keep synthesis evidence with the project</li></ol>
+          <a class="button button-outline" href="https://github.com/aquasock/Tang-Build">Open Tang-Build ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="section-shell start-checklist">
+        <div class="section-heading reveal"><div><p class="eyebrow">Before you begin</p><h2>Bring the right pieces.</h2></div><p>Exact versions and requirements change. Treat these as categories, then check the linked project before buying hardware or building artifacts.</p></div>
+        <div class="check-grid">
+          <div class="check-item reveal"><span>□</span><div><h3>Tang Console 138K</h3><p>The physical target for the current ecosystem.</p></div></div>
+          <div class="check-item reveal"><span>□</span><div><h3>MicroSD storage</h3><p>Holds shell resources, cartridges, runtimes, and media.</p></div></div>
+          <div class="check-item reveal"><span>□</span><div><h3>USB serial access</h3><p>Useful for loading, logs, diagnostics, and bring-up.</p></div></div>
+          <div class="check-item reveal"><span>□</span><div><h3>HDMI display</h3><p>The primary visual output for integrated systems.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-shell docs-routing">
+      <div class="section-heading reveal"><div><p class="eyebrow">Know where to look</p><h2>Documentation has owners.</h2></div></div>
+      <div class="routing-table reveal" role="table" aria-label="Documentation routing">
+        <div role="row"><strong role="columnheader">Question</strong><strong role="columnheader">Start here</strong><strong role="columnheader">Why</strong></div>
+        <a role="row" href="https://github.com/aquasock/TinyTang"><span role="cell">Shell, card, launcher, or controls?</span><b role="cell">TinyTang</b><span role="cell">Owns the console experience</span></a>
+        <a role="row" href="projects.html#systems"><span role="cell">A specific machine or runtime?</span><b role="cell">System repository</b><span role="cell">Owns system behavior and builds</span></a>
+        <a role="row" href="https://github.com/aquasock/Tang-Build"><span role="cell">Toolchain or reproducibility?</span><b role="cell">Tang-Build</b><span role="cell">Owns the open build environment</span></a>
+        <a role="row" href="architecture.html"><span role="cell">How do the pieces relate?</span><b role="cell">This hub</b><span role="cell">Owns the ecosystem map</span></a>
+      </div>
+    </section>
+
+    <aside class="source-note section-shell reveal"><span>EXPECT CHANGE</span><p>TinyTang is active engineering work. Pin revisions for repeatable builds, keep known-good artifacts, and read the latest project notes before assuming compatibility.</p></aside>
+  </main>
+  <footer class="site-footer section-shell"><div class="footer-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><strong>TinyTang</strong></div><p>An independent open-hardware ecosystem for the Sipeed Tang Console 138K.</p><div><a href="https://github.com/aquasock">GitHub</a><a href="projects.html">Projects</a><a href="start.html">Docs</a></div></footer>
+</body>
+</html>

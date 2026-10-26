@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A map of projects in the TinyTang FPGA console ecosystem.">
+  <meta name="theme-color" content="#08100f"><title>Projects — TinyTang</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css"><script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="TinyTang home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>TINY<span>TANG</span></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span class="sr-only">Toggle navigation</span><i></i><i></i><i></i></button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+      <a href="index.html">Overview</a><a href="projects.html" aria-current="page">Projects</a><a href="architecture.html">Architecture</a><a href="start.html">Get started</a><a class="nav-github" href="https://github.com/aquasock" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="content">
+    <section class="page-hero section-shell">
+      <p class="eyebrow reveal">Repository atlas / 2026</p>
+      <h1 class="reveal">The whole<br><em>ecosystem.</em></h1>
+      <div class="page-intro reveal"><p>This is the map. The README and documentation in each linked repository remain the authority for build steps, compatibility, and current status.</p><span class="coordinate">32.2180° N<br>110.9715° W</span></div>
+    </section>
+
+    <section class="project-section section-shell" id="systems">
+      <div class="project-section-title reveal"><span>01</span><div><p class="eyebrow">Console + systems</p><h2>The machines you run.</h2></div></div>
+      <div class="project-list">
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyTang"><span class="project-code">SHELL</span><div><h3>TinyTang</h3><p>The parent console shell: desktop, storage, input, loading, diagnostics, and cartridge coordination.</p></div><span class="pill pill-stable">Active</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyNES"><span class="project-code">NES</span><div><h3>TinyNES</h3><p>NES platform with an AE350 runtime, HDMI video, Wii controller input, audio, and save-state work.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyGBC"><span class="project-code">GBC</span><div><h3>TinyGBC</h3><p>Game Boy Color hardware and runtime built around the shared console environment.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/Tiny89"><span class="project-code">T89</span><div><h3>Tiny89</h3><p>A TI-89 Titanium emulator with a TiEmu-derived core, AE350 runtime, HDMI LCD, and controller input.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyPhosphor"><span class="project-code">VEC</span><div><h3>TinyPhosphor</h3><p>A hardware vector display processor, register ABI, and bare-metal graphics runtime.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
+      </div>
+    </section>
+
+    <section class="project-section section-shell section-rule" id="experiments">
+      <div class="project-section-title reveal"><span>02</span><div><p class="eyebrow">Work in progress</p><h2>New worlds taking shape.</h2></div></div>
+      <div class="project-list">
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyCreature"><span class="project-code">SIM</span><div><h3>TinyCreature</h3><p>A creature-simulation and terrain-rendering experiment informed by the openblack project.</p></div><span class="pill pill-wip">In development</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyMaps"><span class="project-code">MAP</span><div><h3>TinyMaps</h3><p>A map renderer and simulation path with dedicated HDMI and content-loading work.</p></div><span class="pill pill-wip">In development</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyVCMI"><span class="project-code">H3</span><div><h3>TinyVCMI</h3><p>An early investigation into bringing VCMI-oriented workloads to the Tiny ecosystem.</p></div><span class="pill pill-wip">Exploratory</span><i>↗</i></a>
+      </div>
+    </section>
+
+    <section class="project-section section-shell section-rule" id="cores">
+      <div class="project-section-title reveal"><span>03</span><div><p class="eyebrow">Gateware + history</p><h2>The ideas underneath.</h2></div></div>
+      <div class="project-list">
+        <a class="project-row reveal" href="https://github.com/aquasock/Tang-Phosphor"><span class="project-code">RTL</span><div><h3>Tang-Phosphor</h3><p>The predecessor and reference implementation behind the current vector-graphics work.</p></div><span class="pill">Reference</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/Tang-PSX"><span class="project-code">PSX</span><div><h3>Tang-PSX</h3><p>Historical PlayStation-focused research retained as an architectural record.</p></div><span class="pill">Historical</span><i>↗</i></a>
+      </div>
+    </section>
+
+    <section class="project-section section-shell section-rule" id="tooling">
+      <div class="project-section-title reveal"><span>04</span><div><p class="eyebrow">Build layer</p><h2>The open path to silicon.</h2></div></div>
+      <div class="project-list">
+        <a class="project-row reveal" href="https://github.com/aquasock/Tang-Build"><span class="project-code">BLD</span><div><h3>Tang-Build</h3><p>A reproducible container and verification path for the open Gowin FPGA toolchain.</p></div><span class="pill pill-tool">Tooling</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/apicula"><span class="project-code">PNR</span><div><h3>Apicula fork</h3><p>Device database and bitstream tooling used by the open build path.</p></div><span class="pill pill-tool">Upstream fork</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/nextpnr"><span class="project-code">PNR</span><div><h3>nextpnr fork</h3><p>Place-and-route work used by the Gowin FPGA compilation flow.</p></div><span class="pill pill-tool">Upstream fork</span><i>↗</i></a>
+      </div>
+    </section>
+
+    <aside class="source-note section-shell reveal"><span>DOCS CONTRACT</span><p>This hub explains relationships and points the way. Exact commands and technical claims live with the code they describe. When the two disagree, trust the owning repository.</p></aside>
+  </main>
+  <footer class="site-footer section-shell"><div class="footer-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><strong>TinyTang</strong></div><p>An independent open-hardware ecosystem for the Sipeed Tang Console 138K.</p><div><a href="https://github.com/aquasock">GitHub</a><a href="projects.html">Projects</a><a href="start.html">Docs</a></div></footer>
+</body>
+</html>
