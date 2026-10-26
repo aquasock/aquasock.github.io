@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TinyNES brings NES games to the Tang Console 138K with FPGA video, audio, controller support, TinyDesk integration, and persistent saves.">
+  <meta name="theme-color" content="#08100f">
+  <title>TinyNES — TinyTang</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="../../site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="../../index.html" aria-label="TinyTang home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>TINY<span>TANG</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <span class="sr-only">Toggle navigation</span><i></i><i></i><i></i>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+      <a href="../../index.html">Overview</a>
+      <a href="../../projects.html" aria-current="page">Projects</a>
+      <a href="../../architecture.html">Architecture</a>
+      <a href="../../start.html">Get started</a>
+      <a class="nav-github" href="https://github.com/aquasock/TinyNES" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="project-detail-hero project-nes-hero">
+      <div class="section-shell project-detail-grid">
+        <div class="project-detail-copy reveal">
+          <a class="breadcrumb" href="../../projects.html#systems"><span aria-hidden="true">←</span> Console + systems</a>
+          <p class="eyebrow"><span class="status-dot"></span> Integrated system / 01</p>
+          <h1>Tiny<span>NES</span></h1>
+          <p class="project-tagline">The Nintendo Entertainment System, rebuilt around an open FPGA console and a hardened RISC-V processor.</p>
+          <div class="project-badges" aria-label="Project status">
+            <span>Hardware proven</span><span>Desktop integrated</span><span>Open source</span>
+          </div>
+        </div>
+        <figure class="media-placeholder media-placeholder-hero reveal reveal-delay">
+          <div class="placeholder-screen">
+            <span class="placeholder-grid" aria-hidden="true"></span>
+            <strong>SCREENSHOT<br>01</strong>
+            <small>GAMEPLAY ON HARDWARE · 16:9</small>
+          </div>
+          <figcaption><span>Replace with:</span> a clean HDMI capture of a recognizable game scene</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <nav class="project-subnav" aria-label="TinyNES page sections">
+      <div class="section-shell">
+        <a href="#overview">Overview</a><a href="#play">Play</a><a href="#controls">Controls</a><a href="#experience">Experience</a><a href="#inside">Inside</a><a href="#status">Status</a>
+      </div>
+    </nav>
+
+    <section class="section project-overview section-shell" id="overview">
+      <div class="project-intro reveal">
+        <p class="eyebrow">A complete console path</p>
+        <h2>Not just an emulator.<br><em>A machine around it.</em></h2>
+        <p>TinyNES runs a tuned FCEUmm core on the FPGA’s 750&nbsp;MHz AE350 RISC-V CPU. Purpose-built FPGA logic supplies memory, HDMI video, audio, controller buses, and the live TinyDesk overlay.</p>
+      </div>
+      <dl class="fact-strip reveal">
+        <div><dt>1280×720</dt><dd>HDMI output</dd></div>
+        <div><dt>60 Hz</dt><dd>Display timing</dd></div>
+        <div><dt>2 players</dt><dd>In-game input</dd></div>
+        <div><dt>32 MiB</dt><dd>System SDRAM</dd></div>
+      </dl>
+      <div class="media-duo">
+        <figure class="media-placeholder reveal">
+          <div class="placeholder-screen placeholder-light"><strong>SCREENSHOT 02</strong><small>TINYNES LIBRARY · 16:9</small></div>
+          <figcaption><span>Replace with:</span> TinyDesk’s TinyNES Library with several games visible</figcaption>
+        </figure>
+        <figure class="media-placeholder reveal">
+          <div class="placeholder-screen placeholder-light"><strong>SCREENSHOT 03</strong><small>PHYSICAL CONSOLE · 4:3</small></div>
+          <figcaption><span>Replace with:</span> Tang Console 138K, display, and controller setup</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="play">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Play a cartridge</p><h2>From library<br>to game.</h2></div>
+          <p>Once TinyNES is installed, games launch entirely from TinyDesk. No host computer or shell is needed during normal play.</p>
+        </div>
+        <ol class="play-flow">
+          <li class="reveal"><span>01</span><div><h3>Add your games</h3><p>Place legally obtained <code>.nes</code> files—or ZIP files containing one NES image—under <code>/root/media/nes</code> on the console’s card.</p></div></li>
+          <li class="reveal"><span>02</span><div><h3>Open TinyNES</h3><p>Launch the TinyNES window from TinyDesk and browse the Library tab. Folders are supported.</p></div></li>
+          <li class="reveal"><span>03</span><div><h3>Select and launch</h3><p>Choose a cartridge. TinyTang loads the FPGA core, player, and game in roughly ten seconds.</p></div></li>
+          <li class="reveal"><span>04</span><div><h3>Return safely</h3><p>Hold <kbd>HOME</kbd> + <kbd>−</kbd> to finish the session and return to the desktop core.</p></div></li>
+        </ol>
+        <aside class="legal-callout reveal"><strong>Bring your own cartridges.</strong><p>TinyNES does not distribute commercial game images. The repository, build outputs, and console card keep user-owned ROM data separate.</p></aside>
+      </div>
+    </section>
+
+    <section class="section section-shell controls-section" id="controls">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">Controller map</p><h2>Classic controls.<br>Console shortcuts.</h2></div>
+        <p>Player one uses the controller on USB-A port 2. Player two uses TinyNES’s controller-2 bus on PMOD0. Both use Wii Classic-compatible reports.</p>
+      </div>
+      <div class="controller-map reveal">
+        <div class="controller-visual" aria-hidden="true">
+          <div class="controller-dpad"><i></i><i></i></div>
+          <div class="controller-center"><i>−</i><i>HOME</i><i>+</i></div>
+          <div class="controller-face"><i>Y</i><i>B</i><i>A</i><i>X</i></div>
+        </div>
+        <div class="control-list">
+          <div><kbd>D-pad</kbd><span>NES directions</span></div>
+          <div><kbd>Left stick</kbd><span>NES directions</span></div>
+          <div><kbd>B</kbd><span>NES A button</span></div>
+          <div><kbd>Y</kbd><span>NES B button</span></div>
+          <div><kbd>−</kbd><span>Select</span></div>
+          <div><kbd>+</kbd><span>Start</span></div>
+          <div class="control-muted"><kbd>A / X</kbd><span>Unassigned</span></div>
+        </div>
+      </div>
+      <div class="shortcut-grid">
+        <article class="reveal"><span>Tap</span><h3>HOME</h3><p>Open or close TinyDesk over the running game.</p></article>
+        <article class="reveal"><span>Hold</span><h3>HOME + L</h3><p>Save the current game state to the active slot.</p></article>
+        <article class="reveal"><span>Hold</span><h3>HOME + R</h3><p>Load the state already held in the active slot.</p></article>
+        <article class="reveal"><span>Hold</span><h3>HOME + −</h3><p>Exit the game and return to TinyDesk.</p></article>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">The experience</p><h2>Video, sound,<br>and a desktop.</h2></div>
+          <p>The emulator produces the NES picture and sound. Dedicated hardware carries them to the display and speakers while the console shell remains one button away.</p>
+        </div>
+        <div class="experience-grid">
+          <article class="experience-card reveal">
+            <span class="experience-index">V / 01</span><h3>Three picture modes</h3><p>The 256×240 NES image is centered in a 1280×720 HDMI frame. Choose authentic 8:7 pixels, square 1:1 pixels, or a 4:3 television frame.</p>
+            <div class="aspect-demo" aria-label="Supported picture aspect modes"><i class="aspect-87">8:7</i><i class="aspect-11">1:1</i><i class="aspect-43">4:3</i></div>
+          </article>
+          <article class="experience-card reveal">
+            <span class="experience-index">A / 02</span><h3>One audio stream</h3><p>Game audio plays through HDMI and the optional Digilent Pmod I2S2. TinyDesk provides one logarithmic master volume and mute for both outputs.</p>
+            <div class="audio-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="experience-card experience-card-wide reveal">
+            <span class="experience-index">UI / 03</span><div><h3>TinyDesk stays live</h3><p>Tap HOME and the 80×45-cell TinyDesk layer replaces the game picture. The game keeps running underneath—with sound—while controller input moves to the desktop. Tap HOME again to return.</p></div>
+            <figure class="media-placeholder media-placeholder-inline">
+              <div class="placeholder-screen"><strong>SCREENSHOT 04</strong><small>TINYDESK OVER A RUNNING GAME · 16:9</small></div>
+              <figcaption><span>Replace with:</span> the desktop overlay while a TinyNES session is active</figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-accent saves-section">
+      <div class="section-shell saves-grid">
+        <div class="reveal"><p class="eyebrow">Persistent play</p><h2>Stop now.<br>Continue later.</h2></div>
+        <div class="reveal">
+          <p>Each cartridge gets one persistent save-state slot. Saving is immediate in SDRAM, then TinyTang writes the state to the card in the background and verifies it before replacing the previous copy.</p>
+          <ul class="feature-checks"><li>States are matched to the cartridge CRC</li><li>Battery-backed game RAM is retained</li><li>The Saves tab exposes file, size, core, and frame details</li><li>Interrupted writes leave the previous state intact</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-shell" id="inside">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">Inside the system</p><h2>Software where it fits.<br>Hardware where it counts.</h2></div>
+        <p>The split is deliberate: FCEUmm runs as software on the hard CPU, while the FPGA fabric handles the paths that bind it to the physical console.</p>
+      </div>
+      <div class="nes-stack reveal" aria-label="TinyNES architecture diagram">
+        <div><span>CARTRIDGE</span><strong>.nes / .zip</strong><small>User-owned game image</small></div><i>→</i>
+        <div class="nes-stack-featured"><span>AE350 · 750 MHz</span><strong>FCEUmm</strong><small>CPU · PPU · APU · mapper</small></div><i>↔</i>
+        <div><span>FPGA FABRIC</span><strong>TinyNES SoC</strong><small>SDRAM · video · audio · input</small></div><i>→</i>
+        <div><span>CONSOLE</span><strong>HDMI + controls</strong><small>Picture · sound · TinyDesk</small></div>
+      </div>
+      <div class="technical-grid">
+        <article class="reveal"><span>CPU</span><h3>Hardened AE350</h3><p>RV32 at 750&nbsp;MHz with 32&nbsp;KiB instruction and data caches.</p></article>
+        <article class="reveal"><span>MEMORY</span><h3>32 MiB SDRAM</h3><p>Game runtime, heap, and double-buffered indexed video.</p></article>
+        <article class="reveal"><span>VIDEO</span><h3>FPGA HDMI path</h3><p>720p timing, hardware palette, emphasis, scaling, and overlay.</p></article>
+        <article class="reveal"><span>AUDIO</span><h3>48.8 kHz stereo</h3><p>Buffered I2S shared by HDMI and the optional external DAC.</p></article>
+      </div>
+    </section>
+
+    <section class="section section-dark status-section" id="status">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Current status</p><h2>Measured on<br>real hardware.</h2></div>
+          <p>TinyNES is integrated and playable, but it remains an engineering project rather than a packaged consumer release.</p>
+        </div>
+        <div class="proof-grid">
+          <article class="reveal"><strong>Frame budget</strong><span>Met</span><p>The tuned core runs inside the NES frame period in the documented hardware tests.</p></article>
+          <article class="reveal"><strong>Video delivery</strong><span>Clean</span><p>Documented runs reported no late scanlines or missed frames.</p></article>
+          <article class="reveal"><strong>Audio delivery</strong><span>Clean</span><p>Game and diagnostic runs completed without FIFO underruns or dropped samples.</p></article>
+          <article class="reveal"><strong>Accuracy harness</strong><span>90 / 146</span><p>The current FCEUmm patch series passes 90 of the 146 exercised AccuracyCoin checks.</p></article>
+          <article class="reveal"><strong>Save replay</strong><span>Matched</span><p>Video and audio checksums match across documented save-and-load replays.</p></article>
+          <article class="reveal"><strong>Distribution</strong><span>Source build</span><p>There is currently no packaged GitHub release; builders deploy from the repository.</p></article>
+        </div>
+        <div class="builder-callout reveal">
+          <div><p class="eyebrow">For builders</p><h3>Reproduce the open flow.</h3><p>The source includes the AE350 runtime, FPGA SoC, FCEUmm patch series, host tests, RTL testbenches, timing checks, and multi-seed build tooling.</p></div>
+          <div class="command-card"><span>BUILD + DEPLOY</span><code>bash tools/build_ae350_soc.sh<br>tools/deploy_tinytang.sh</code><small>Requires the documented open toolchain and a sibling TinyTang checkout.</small></div>
+        </div>
+        <div class="project-end-actions reveal">
+          <a class="button button-primary" href="https://github.com/aquasock/TinyNES">Browse TinyNES source <span aria-hidden="true">↗</span></a>
+          <a class="button button-project-back" href="../../projects.html">Back to all projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-brand"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><strong>TinyTang</strong></div>
+    <p>An independent open-hardware ecosystem for the Sipeed Tang Console 138K.</p>
+    <div><a href="https://github.com/aquasock">GitHub</a><a href="../../projects.html">Projects</a><a href="../../start.html">Docs</a></div>
+  </footer>
+</body>
+</html>
