@@ -33,24 +33,24 @@
     <section class="page-hero section-shell">
       <p class="eyebrow reveal">Repository atlas / 2026</p>
       <h1 class="reveal">The whole<br><em>ecosystem.</em></h1>
-      <div class="page-intro reveal"><p>This is the map. The README and documentation in each linked repository remain the authority for build steps, compatibility, and current status.</p><span class="coordinate">32.2180° N<br>110.9715° W</span></div>
+      <div class="page-intro reveal"><p>This is the map. The README and documentation in each linked repository remain the authority for build steps, compatibility, and current status.</p></div>
     </section>
 
     <section class="project-section section-shell" id="systems">
       <div class="project-section-title reveal"><span>01</span><div><p class="eyebrow">Console + systems</p><h2>The machines you run.</h2></div></div>
       <div class="project-list">
-        <a class="project-row reveal" href="https://github.com/aquasock/TinyTang"><span class="project-code">SHELL</span><div><h3>TinyTang</h3><p>The parent console shell: desktop, storage, input, loading, diagnostics, and cartridge coordination.</p></div><span class="pill pill-stable">Active</span><i>↗</i></a>
-        <a class="project-row reveal" href="projects/tinynes/"><span class="project-code">NES</span><div><h3>TinyNES</h3><p>NES platform with an AE350 runtime, HDMI video, Wii controller input, audio, and persistent save states.</p></div><span class="pill pill-live">Integrated</span><i>→</i></a>
-        <a class="project-row reveal" href="https://github.com/aquasock/TinyGBC"><span class="project-code">GBC</span><div><h3>TinyGBC</h3><p>Game Boy Color hardware and runtime built around the shared console environment.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
-        <a class="project-row reveal" href="https://github.com/aquasock/Tiny89"><span class="project-code">T89</span><div><h3>Tiny89</h3><p>A TI-89 Titanium emulator with a TiEmu-derived core, AE350 runtime, HDMI LCD, and controller input.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
-        <a class="project-row reveal" href="https://github.com/aquasock/TinyPhosphor"><span class="project-code">VEC</span><div><h3>TinyPhosphor</h3><p>A hardware vector display processor, register ABI, and bare-metal graphics runtime.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyTang"><span class="project-code">SHELL</span><div><h3>TinyTang</h3><p>The parent console shell: the TinyDesk desktop on HDMI, Bluetooth keyboards, mice and gamepads, storage, core loading, and diagnostics.</p></div><span class="pill pill-stable">v0.2.1</span><i>↗</i></a>
+        <a class="project-row reveal" href="projects/tinynes/"><span class="project-code">NES</span><div><h3>TinyNES</h3><p>NES on FCEUmm on the AE350, with HDMI video, audio, wired Wii Classic and Bluetooth pads, and persistent save states.</p></div><span class="pill pill-live">Integrated</span><i>→</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyGBC"><span class="project-code">GBC</span><div><h3>TinyGBC</h3><p>Game Boy Color on gambatte on the AE350, with palettes, colour correction, battery saves, and cartridge clocks.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/Tiny89"><span class="project-code">T89</span><div><h3>Tiny89</h3><p>A TI-89 Titanium emulator on a TiEmu 3.04 core on the AE350, with the calculator’s LCD on HDMI and controller input. Needs your own OS image.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyPhosphor"><span class="project-code">AUD</span><div><h3>TinyPhosphor</h3><p>A music player and stereo XY visualiser: eleven codec families through Rockbox’s decoders on the AE350, the picture and I2S audio in the FPGA, built with the open flow.</p></div><span class="pill pill-live">Integrated</span><i>↗</i></a>
       </div>
     </section>
 
     <section class="project-section section-shell section-rule" id="experiments">
       <div class="project-section-title reveal"><span>02</span><div><p class="eyebrow">Work in progress</p><h2>New worlds taking shape.</h2></div></div>
       <div class="project-list">
-        <a class="project-row reveal" href="https://github.com/aquasock/TinyCreature"><span class="project-code">SIM</span><div><h3>TinyCreature</h3><p>A creature-simulation and terrain-rendering experiment informed by the openblack project.</p></div><span class="pill pill-wip">In development</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/TinyCreature"><span class="project-code">SIM</span><div><h3>TinyCreature</h3><p>Black &amp; White’s engine through openblack, the open reimplementation, aimed at the AE350 with a 3D renderer in the fabric. A stripped landscape playground runs on a PC so far.</p></div><span class="pill pill-wip">In development</span><i>↗</i></a>
         <a class="project-row reveal" href="https://github.com/aquasock/TinyMaps"><span class="project-code">MAP</span><div><h3>TinyMaps</h3><p>A map renderer and simulation path with dedicated HDMI and content-loading work.</p></div><span class="pill pill-wip">In development</span><i>↗</i></a>
         <a class="project-row reveal" href="https://github.com/aquasock/TinyVCMI"><span class="project-code">H3</span><div><h3>TinyVCMI</h3><p>An early investigation into bringing VCMI-oriented workloads to the Tiny ecosystem.</p></div><span class="pill pill-wip">Exploratory</span><i>↗</i></a>
       </div>
@@ -59,7 +59,7 @@
     <section class="project-section section-shell section-rule" id="cores">
       <div class="project-section-title reveal"><span>03</span><div><p class="eyebrow">Gateware + history</p><h2>The ideas underneath.</h2></div></div>
       <div class="project-list">
-        <a class="project-row reveal" href="https://github.com/aquasock/Tang-Phosphor"><span class="project-code">RTL</span><div><h3>Tang-Phosphor</h3><p>The predecessor and reference implementation behind the current vector-graphics work.</p></div><span class="pill">Reference</span><i>↗</i></a>
+        <a class="project-row reveal" href="https://github.com/aquasock/Tang-Phosphor"><span class="project-code">RTL</span><div><h3>Tang-Phosphor</h3><p>The MiSTer-Phosphor audio core ported to the Tang on Tang-Control’s firmware: TinyPhosphor’s predecessor, and the source of the desktop core’s OLED panel engine.</p></div><span class="pill">Reference</span><i>↗</i></a>
         <a class="project-row reveal" href="https://github.com/aquasock/Tang-PSX"><span class="project-code">PSX</span><div><h3>Tang-PSX</h3><p>Historical PlayStation-focused research retained as an architectural record.</p></div><span class="pill">Historical</span><i>↗</i></a>
       </div>
     </section>

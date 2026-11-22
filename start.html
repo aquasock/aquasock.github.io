@@ -37,9 +37,9 @@
     <section class="path-section section-shell">
       <div class="path-grid">
         <article class="path-card path-card-accent reveal">
-          <span class="path-number">PATH 01</span><h2>Use the console</h2><p>Start with the shell, learn the SD-card layout, and launch an existing system.</p>
-          <ol><li>Open the TinyTang quick start</li><li>Prepare the documented card layout</li><li>Add a supported cartridge</li><li>Verify on the Tang Console 138K</li></ol>
-          <a class="button button-dark" href="https://github.com/aquasock/TinyTang#quick-start">TinyTang quick start ↗</a>
+          <span class="path-number">PATH 01</span><h2>Use the console</h2><p>Install the latest release, pair a keyboard and mouse, and launch an existing system.</p>
+          <ol><li>Unzip the v0.2.1 SD card archive onto a card</li><li>Write the firmware once over the BL616’s ROM bootloader</li><li>Pair a Bluetooth LE keyboard and mouse</li><li>Open TinyDesk and launch a game from its window</li></ol>
+          <a class="button button-dark" href="https://github.com/aquasock/TinyTang/releases/latest">TinyTang v0.2.1 ↗</a>
         </article>
         <article class="path-card reveal">
           <span class="path-number">PATH 02</span><h2>Study a system</h2><p>Choose one integrated machine and follow its hardware, firmware, and media path.</p>
@@ -60,8 +60,12 @@
         <div class="check-grid">
           <div class="check-item reveal"><span>□</span><div><h3>Tang Console 138K</h3><p>The physical target for the current ecosystem.</p></div></div>
           <div class="check-item reveal"><span>□</span><div><h3>MicroSD storage</h3><p>Holds shell resources, cartridges, runtimes, and media.</p></div></div>
-          <div class="check-item reveal"><span>□</span><div><h3>USB serial access</h3><p>Useful for loading, logs, diagnostics, and bring-up.</p></div></div>
           <div class="check-item reveal"><span>□</span><div><h3>HDMI display</h3><p>The primary visual output for integrated systems.</p></div></div>
+          <div class="check-item reveal"><span>□</span><div><h3>2.4 GHz antenna</h3><p>Fitted to the dock’s U.FL jack, marked ANT on the underside. The board ships without one, and bare it connects only at very short range.</p></div></div>
+          <div class="check-item reveal"><span>□</span><div><h3>Bluetooth keyboard and mouse</h3><p>Bluetooth LE devices drive the desktop. Switch-mode Bluetooth gamepads join them on main since v0.2.1, not yet released.</p></div></div>
+          <div class="check-item reveal"><span>□</span><div><h3>Game controllers</h3><p>Wii Classic Controllers on an adapter in the USB-A port, for TinyNES, TinyGBC and the desktop.</p></div></div>
+          <div class="check-item reveal"><span>□</span><div><h3>A computer with USB-C</h3><p>For the first install and the first pairing, then for logs, diagnostics, and bring-up.</p></div></div>
+          <div class="check-item reveal"><span>□</span><div><h3>Pmod I2S2, optional</h3><p>Line-out sound beside HDMI, fitted on PMOD1.</p></div></div>
         </div>
       </div>
     </section>

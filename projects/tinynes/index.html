@@ -103,7 +103,7 @@
         <ol class="play-flow">
           <li class="reveal"><span>01</span><div><h3>Add your games</h3><p>Place legally obtained <code>.nes</code> files—or ZIP files containing one NES image—under <code>/root/media/nes</code> on the console’s card.</p></div></li>
           <li class="reveal"><span>02</span><div><h3>Open TinyNES</h3><p>Launch the TinyNES window from TinyDesk and browse the Library tab. Folders are supported.</p></div></li>
-          <li class="reveal"><span>03</span><div><h3>Select and launch</h3><p>Choose a cartridge. TinyTang loads the FPGA core, player, and game in roughly ten seconds.</p></div></li>
+          <li class="reveal"><span>03</span><div><h3>Select and launch</h3><p>Choose a cartridge and Launch. TinyTang loads the FPGA core, the player, and the game.</p></div></li>
           <li class="reveal"><span>04</span><div><h3>Return safely</h3><p>Hold <kbd>HOME</kbd> + <kbd>−</kbd> to finish the session and return to the desktop core.</p></div></li>
         </ol>
         <aside class="legal-callout reveal"><strong>Bring your own cartridges.</strong><p>TinyNES does not distribute commercial game images. The repository, build outputs, and console card keep user-owned ROM data separate.</p></aside>
@@ -113,7 +113,7 @@
     <section class="section section-shell controls-section" id="controls">
       <div class="section-heading reveal">
         <div><p class="eyebrow">Controller map</p><h2>Classic controls.<br>Console shortcuts.</h2></div>
-        <p>Player one uses the controller on USB-A port 2. Player two uses TinyNES’s controller-2 bus on PMOD0. Both use Wii Classic-compatible reports.</p>
+        <p>Player one uses the controller on USB-A port 2 and player two TinyNES’s controller-2 bus on PMOD0, both reading Wii Classic-compatible reports. Bluetooth Pad 1 and Pad 2, paired in TinyDesk’s Bluetooth window, play as players 1 and 2 beside them with the same HOME chords (on main since v0.2.1, not yet released).</p>
       </div>
       <div class="controller-map reveal">
         <div class="controller-visual" aria-hidden="true">
@@ -136,10 +136,10 @@
           <a class="shot-frame" href="../../assets/screenshots/tinynes/input.png" target="_blank" rel="noopener" aria-label="Open the Input tab capture at full resolution"><img src="../../assets/screenshots/tinynes/input.png" width="1280" height="720" loading="lazy" alt="TinyNES Input tab showing player one button mappings"></a>
           <figcaption><span>Input tab</span> Review or change each player’s button map</figcaption>
         </figure>
-        <div class="tab-proof-copy"><span>02 / Input</span><h3>Remap from the console.</h3><p>Select a player, choose an action, press the replacement button, and save. Defaults are always one action away.</p></div>
+        <div class="tab-proof-copy"><span>02 / Input</span><h3>Remap from the console.</h3><p>Select a player, then double-click a row or press Enter on it to step it to the next controller button, and Save. Restore defaults puts the standard map back.</p></div>
       </div>
       <div class="shortcut-grid">
-        <article class="reveal"><span>Tap</span><h3>HOME</h3><p>Open or close TinyDesk over the running game.</p></article>
+        <article class="reveal"><span>Tap</span><h3>HOME</h3><p>Open or close TinyDesk over the running game. The wired Classic then drives the desktop: left stick for the pointer, A and B the buttons, d-pad the arrows (on main since v0.2.1, not yet released).</p></article>
         <article class="reveal"><span>Hold</span><h3>HOME + L</h3><p>Save the current game state to the active slot.</p></article>
         <article class="reveal"><span>Hold</span><h3>HOME + R</h3><p>Load the state already held in the active slot.</p></article>
         <article class="reveal"><span>Hold</span><h3>HOME + −</h3><p>Exit the game and return to TinyDesk.</p></article>
@@ -174,7 +174,7 @@
         <div class="reveal"><p class="eyebrow">Persistent play</p><h2>Stop now.<br>Continue later.</h2></div>
         <div class="reveal">
           <p>Each cartridge gets one persistent save-state slot. Saving is immediate in SDRAM, then TinyTang writes the state to the card in the background and verifies it before replacing the previous copy.</p>
-          <ul class="feature-checks"><li>States are matched to the cartridge CRC</li><li>Battery-backed game RAM is retained</li><li>The Saves tab exposes file, size, core, and frame details</li><li>Interrupted writes leave the previous state intact</li></ul>
+          <ul class="feature-checks"><li>States are matched to the cartridge CRC</li><li>Battery-backed game RAM is retained</li><li>The Saves tab shows when the state and battery save were last written, with the state’s details below</li><li>Interrupted writes leave the previous state intact</li></ul>
         </div>
         <figure class="project-shot saves-shot reveal">
           <a class="shot-frame" href="../../assets/screenshots/tinynes/saves.png" target="_blank" rel="noopener" aria-label="Open the Saves tab capture at full resolution"><img src="../../assets/screenshots/tinynes/saves.png" width="1280" height="720" loading="lazy" alt="TinyNES Saves tab showing metadata for a saved game state and battery save"></a>
@@ -214,7 +214,7 @@
           <article class="reveal"><strong>Audio delivery</strong><span>Clean</span><p>Game and diagnostic runs completed without FIFO underruns or dropped samples.</p></article>
           <article class="reveal"><strong>Accuracy harness</strong><span>90 / 146</span><p>The current FCEUmm patch series passes 90 of the 146 exercised AccuracyCoin checks.</p></article>
           <article class="reveal"><strong>Save replay</strong><span>Matched</span><p>Video and audio checksums match across documented save-and-load replays.</p></article>
-          <article class="reveal"><strong>Distribution</strong><span>Source build</span><p>There is currently no packaged GitHub release; builders deploy from the repository.</p></article>
+          <article class="reveal"><strong>Distribution</strong><span>Release card</span><p>TinyNES ships on TinyTang’s release card from v0.2.0. Builders can also deploy it from this repository.</p></article>
         </div>
         <div class="builder-callout reveal">
           <div><p class="eyebrow">For builders</p><h3>Reproduce the open flow.</h3><p>The source includes the AE350 runtime, FPGA SoC, FCEUmm patch series, host tests, RTL testbenches, timing checks, and multi-seed build tooling.</p></div>

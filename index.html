@@ -55,7 +55,7 @@
         <dl class="hero-stats" aria-label="Ecosystem highlights">
           <div><dt>01</dt><dd>shared shell</dd></div>
           <div><dt>04</dt><dd>integrated systems</dd></div>
-          <div><dt>100%</dt><dd>open source</dd></div>
+          <div><dt>v0.2.1</dt><dd>latest release</dd></div>
         </dl>
       </div>
 
@@ -111,26 +111,39 @@
         <div class="system-grid">
           <a class="system-card reveal" href="projects/tinynes/">
             <span class="system-number">8·BIT / 01</span><div class="pixel-glyph glyph-nes" aria-hidden="true"></div>
-            <div><h3>TinyNES</h3><p>NES hardware and runtime with save states, HDMI output, and controller support.</p></div>
+            <div><h3>TinyNES</h3><p>NES on FCEUmm, with save states, HDMI output, and wired Wii Classic or Bluetooth controllers.</p></div>
             <span class="card-link">Explore TinyNES →</span>
           </a>
           <a class="system-card reveal" href="https://github.com/aquasock/TinyGBC">
             <span class="system-number">8·BIT / 02</span><div class="pixel-glyph glyph-gbc" aria-hidden="true"></div>
-            <div><h3>TinyGBC</h3><p>A Game Boy Color system shaped for the shared AE350 console environment.</p></div>
+            <div><h3>TinyGBC</h3><p>Game Boy Color on gambatte, with palettes, colour correction, battery saves, and cartridge clocks.</p></div>
             <span class="card-link">Explore repository ↗</span>
           </a>
           <a class="system-card reveal" href="https://github.com/aquasock/Tiny89">
             <span class="system-number">CALCULATOR / 03</span><div class="pixel-glyph glyph-89" aria-hidden="true"></div>
-            <div><h3>Tiny89</h3><p>A TI-89 Titanium emulator with an AE350 runtime, HDMI calculator display, and controller input.</p></div>
+            <div><h3>Tiny89</h3><p>A TI-89 Titanium emulator on TiEmu, with the calculator’s screen on HDMI. Bring your own TI-89 Titanium OS image.</p></div>
             <span class="card-link">Explore repository ↗</span>
           </a>
           <a class="system-card reveal" href="https://github.com/aquasock/TinyPhosphor">
-            <span class="system-number">VECTOR / 04</span><div class="pixel-glyph glyph-phosphor" aria-hidden="true"></div>
-            <div><h3>TinyPhosphor</h3><p>A hardware vector display processor and bare-metal graphics environment.</p></div>
+            <span class="system-number">AUDIO / 04</span><div class="pixel-glyph glyph-phosphor" aria-hidden="true"></div>
+            <div><h3>TinyPhosphor</h3><p>A music player and stereo XY visualiser: Rockbox’s codecs on the AE350, the picture and I2S audio in the FPGA.</p></div>
             <span class="card-link">Explore repository ↗</span>
           </a>
         </div>
         <div class="section-cta reveal"><a href="projects.html">See the full ecosystem <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section section-shell principles" id="new">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">On main since v0.2.1 · not yet released</p><h2>What’s new on the console.</h2></div>
+        <p>Built and passed on the board since the last release. It is on TinyTang’s main branch and ships in the next release; until then, building from source is the way to get it.</p>
+      </div>
+      <div class="principle-grid">
+        <article class="reveal"><span>01</span><h3>Bluetooth gamepads</h3><p>Switch-mode Bluetooth pads such as the 8BitDo pair from TinyDesk’s Bluetooth window, which now has five slots: keyboard, mouse, combo, Pad 1 and Pad 2. In TinyNES, Pad 1 and Pad 2 play as players 1 and 2.</p></article>
+        <article class="reveal"><span>02</span><h3>One map for every pad</h3><p>The Bluetooth pad, the wired Wii Classic and the nunchuck drive TinyDesk alike: left stick for the pointer, right stick for the wheel, d-pad for the arrows. Over a running TinyNES game the wired Classic does too.</p></article>
+        <article class="reveal"><span>03</span><h3>TinyReader</h3><p>Books and pictures at the full 1280×720, from a framebuffer in the dock’s SDRAM. Books open as two-page spreads and turn in one frame, with a zoom mode for each half page.</p></article>
+        <article class="reveal"><span>04</span><h3>Tidier game windows</h3><p>The TinyNES and TinyGBC windows share one compact layout across their Library, Input, Video, Audio and Saves tabs, and the Saves tab leads with when each save was written.</p></article>
       </div>
     </section>
 
@@ -142,8 +155,8 @@
 <span class="muted">[00.022]</span> controller ..... <b>OK</b>
 <span class="muted">[00.031]</span> cartridge ...... <b>FOUND</b>
 
-core:     <em>tinynes.fs</em>
-runtime:  <em>tinynes.bin</em>
+core:     <em>tinynes.bin</em>
+runtime:  <em>tinynes-play.elf</em>
 media:    <em>game.nes</em>
 
 <span class="prompt">›</span> launching system<span class="cursor">_</span></pre>
