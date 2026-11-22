@@ -108,6 +108,8 @@ button { font: inherit; }
 .system-number { color: #878787; font-family: var(--mono); font-size: 9px; letter-spacing: .16em; }
 .pixel-glyph { width: 90px; height: 90px; margin: 45px auto 34px; filter: drop-shadow(7px 7px 0 var(--ink)); }
 .glyph-nes { background: var(--lime); clip-path: polygon(0 0, 72% 0, 72% 14%, 100% 14%, 100% 86%, 72% 86%, 72% 100%, 0 100%, 0 68%, 22% 68%, 22% 32%, 0 32%); }
+.glyph-snes { background: #fff; clip-path: polygon(34% 0, 66% 0, 66% 34%, 100% 34%, 100% 66%, 66% 66%, 66% 100%, 34% 100%, 34% 66%, 0 66%, 0 34%, 34% 34%); }
+.glyph-gba { background: #fff; clip-path: polygon(22% 22%, 100% 22%, 78% 78%, 0 78%); }
 .glyph-gbc { border: 15px solid #fff; box-shadow: inset 0 0 0 8px var(--char); }
 .glyph-89 { background: conic-gradient(from 45deg, #fff 0 25%, transparent 0 50%, #fff 0 75%, transparent 0); }
 .glyph-phosphor { border: 3px solid var(--lime); transform: rotate(45deg); box-shadow: inset 0 0 0 18px var(--ink), inset 0 0 0 21px var(--lime); }

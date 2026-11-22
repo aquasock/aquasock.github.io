@@ -54,7 +54,7 @@
         </div>
         <dl class="hero-stats" aria-label="Ecosystem highlights">
           <div><dt>01</dt><dd>shared shell</dd></div>
-          <div><dt>04</dt><dd>integrated systems</dd></div>
+          <div><dt>06</dt><dd>integrated systems</dd></div>
           <div><dt>v0.2.1</dt><dd>latest release</dd></div>
         </dl>
       </div>
@@ -105,8 +105,8 @@
     <section class="section section-dark" id="featured">
       <div class="section-shell">
         <div class="section-heading reveal">
-          <div><p class="eyebrow">Playable now</p><h2>Four systems.<br>One launcher.</h2></div>
-          <p>The current TinyTang shell recognizes four integrated cartridge families, with newer experiments growing alongside them.</p>
+          <div><p class="eyebrow">Playable now</p><h2>Six systems.<br>One launcher.</h2></div>
+          <p>The TinyTang shell launches six integrated systems: four run as software on the AE350 hard core, and two are whole consoles built in the FPGA fabric. Newer experiments grow alongside them.</p>
         </div>
         <div class="system-grid">
           <a class="system-card reveal" href="projects/tinynes/">
@@ -114,18 +114,28 @@
             <div><h3>TinyNES</h3><p>NES on FCEUmm, with save states, HDMI output, and wired Wii Classic or Bluetooth controllers.</p></div>
             <span class="card-link">Explore TinyNES →</span>
           </a>
+          <a class="system-card reveal" href="https://github.com/aquasock/TinySNES">
+            <span class="system-number">16·BIT / 02</span><div class="pixel-glyph glyph-snes" aria-hidden="true"></div>
+            <div><h3>TinySNES</h3><p>nand2mario’s SNESTang in the FPGA fabric, built with the open flow: retail cartridges including SuperFX titles, battery saves, and pad remapping.</p></div>
+            <span class="card-link">Explore repository ↗</span>
+          </a>
           <a class="system-card reveal" href="https://github.com/aquasock/TinyGBC">
-            <span class="system-number">8·BIT / 02</span><div class="pixel-glyph glyph-gbc" aria-hidden="true"></div>
+            <span class="system-number">8·BIT / 03</span><div class="pixel-glyph glyph-gbc" aria-hidden="true"></div>
             <div><h3>TinyGBC</h3><p>Game Boy Color on gambatte, with palettes, colour correction, battery saves, and cartridge clocks.</p></div>
             <span class="card-link">Explore repository ↗</span>
           </a>
+          <a class="system-card reveal" href="https://github.com/aquasock/TinyGBA">
+            <span class="system-number">32·BIT / 04</span><div class="pixel-glyph glyph-gba" aria-hidden="true"></div>
+            <div><h3>TinyGBA</h3><p>nand2mario’s GBATang in the FPGA fabric, built with the open flow: retail cartridges with their save hardware set up, saved to the card on exit. On main since v0.2.1, not yet released.</p></div>
+            <span class="card-link">Explore repository ↗</span>
+          </a>
           <a class="system-card reveal" href="https://github.com/aquasock/Tiny89">
-            <span class="system-number">CALCULATOR / 03</span><div class="pixel-glyph glyph-89" aria-hidden="true"></div>
+            <span class="system-number">CALCULATOR / 05</span><div class="pixel-glyph glyph-89" aria-hidden="true"></div>
             <div><h3>Tiny89</h3><p>A TI-89 Titanium emulator on TiEmu, with the calculator’s screen on HDMI. Bring your own TI-89 Titanium OS image.</p></div>
             <span class="card-link">Explore repository ↗</span>
           </a>
           <a class="system-card reveal" href="https://github.com/aquasock/TinyPhosphor">
-            <span class="system-number">AUDIO / 04</span><div class="pixel-glyph glyph-phosphor" aria-hidden="true"></div>
+            <span class="system-number">AUDIO / 06</span><div class="pixel-glyph glyph-phosphor" aria-hidden="true"></div>
             <div><h3>TinyPhosphor</h3><p>A music player and stereo XY visualiser: Rockbox’s codecs on the AE350, the picture and I2S audio in the FPGA.</p></div>
             <span class="card-link">Explore repository ↗</span>
           </a>
@@ -143,7 +153,7 @@
         <article class="reveal"><span>01</span><h3>Bluetooth gamepads</h3><p>Switch-mode Bluetooth pads such as the 8BitDo pair from TinyDesk’s Bluetooth window, which now has five slots: keyboard, mouse, combo, Pad 1 and Pad 2. In TinyNES, Pad 1 and Pad 2 play as players 1 and 2.</p></article>
         <article class="reveal"><span>02</span><h3>One map for every pad</h3><p>The Bluetooth pad, the wired Wii Classic and the nunchuck drive TinyDesk alike: left stick for the pointer, right stick for the wheel, d-pad for the arrows. Over a running TinyNES game the wired Classic does too.</p></article>
         <article class="reveal"><span>03</span><h3>TinyReader</h3><p>Books and pictures at the full 1280×720, from a framebuffer in the dock’s SDRAM. Books open as two-page spreads and turn in one frame, with a zoom mode for each half page.</p></article>
-        <article class="reveal"><span>04</span><h3>Tidier game windows</h3><p>The TinyNES and TinyGBC windows share one compact layout across their Library, Input, Video, Audio and Saves tabs, and the Saves tab leads with when each save was written.</p></article>
+        <article class="reveal"><span>04</span><h3>Tidier game windows</h3><p>The TinyNES, TinySNES, TinyGBC and TinyGBA windows share one compact layout across their Library, Input, Video, Audio and Saves tabs, and the Saves tab leads with when each save was written.</p></article>
       </div>
     </section>
 
